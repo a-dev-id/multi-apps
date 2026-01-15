@@ -17,7 +17,11 @@ All communications are sent asynchronously via a queue system with full tracking
 ### Guest Letter Automation
 
 -   Automatic confirmation letters when bookings are created
--   Scheduled pre-arrival emails (3 days before check-in)
+-   **Dynamic pre-arrival emails** based on booking lead time:
+    -   ≥14 days before arrival: Scheduled 14 days before check-in
+    -   7-13 days before arrival: Scheduled 7 days before check-in
+    -   3-6 days before arrival: Scheduled 3 days before check-in
+    -   0-2 days before arrival: Sent immediately
 -   Post-stay thank you emails with guest personalization
 -   Manual letter creation for direct guest communication
 -   Email status tracking (pending, sent, failed)
@@ -147,8 +151,12 @@ Access the admin panel at `/admin`:
 
 All emails are template-based and customizable:
 
--   **Confirmation Letters** - On booking creation
--   **Pre-Arrival Letters** - 3 days before check-in
+-   **Confirmation Letters** - Sent immediately on booking creation
+-   **Pre-Arrival Letters** - Dynamic timing based on booking lead time:
+    -   14 days before arrival (for bookings made ≥14 days in advance)
+    -   7 days before arrival (for bookings made 7-13 days in advance)
+    -   3 days before arrival (for bookings made 3-6 days in advance)
+    -   Sent immediately (for bookings made 0-2 days before arrival)
 -   **Post-Stay Letters** - After checkout with guest personalization
 -   **Newsletters** - Scheduled campaigns
 -   **Birthday Greetings** - Annual birthday emails
@@ -234,6 +242,7 @@ php artisan test tests/Feature/GuestLetterTest.php
 -   ✨ Guest name personalization in post-stay emails
 -   ✨ Manual post-stay letter creation without bookings
 -   ✨ Guest import from booking system to subscribers
+-   ✨ **Dynamic pre-arrival email timing** - Automatically sends at optimal time based on booking lead time (14, 7, 3 days, or immediately)
 -   🎨 Optimized admin interface with dropdown menu for tools
 -   🐛 Fixed duplicate detection and guest filtering
 -   📊 Enhanced subscriber management interface
