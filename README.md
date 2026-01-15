@@ -15,27 +15,30 @@ All communications are sent asynchronously via a queue system with full tracking
 ## ✨ Key Features
 
 ### Guest Letter Automation
-- Automatic confirmation letters when bookings are created
-- Scheduled pre-arrival emails (3 days before check-in)
-- Post-stay thank you emails with guest personalization
-- Manual letter creation for direct guest communication
-- Email status tracking (pending, sent, failed)
-- Full guest data management
+
+-   Automatic confirmation letters when bookings are created
+-   Scheduled pre-arrival emails (3 days before check-in)
+-   Post-stay thank you emails with guest personalization
+-   Manual letter creation for direct guest communication
+-   Email status tracking (pending, sent, failed)
+-   Full guest data management
 
 ### Newsletter Management
-- Campaign creation and scheduling
-- Subscriber management with tagging
-- Guest import from booking system
-- Duplicate detection and merging
-- Bounce list management
-- Email open tracking and analytics
-- CSV import/export functionality
+
+-   Campaign creation and scheduling
+-   Subscriber management with tagging
+-   Guest import from booking system
+-   Duplicate detection and merging
+-   Bounce list management
+-   Email open tracking and analytics
+-   CSV import/export functionality
 
 ### Birthday Notifications
-- Automatic birthday email detection
-- Scheduled birthday greetings
-- Integration with subscriber database
-- Annual send tracking
+
+-   Automatic birthday email detection
+-   Scheduled birthday greetings
+-   Integration with subscriber database
+-   Annual send tracking
 
 ## 🏗️ Architecture
 
@@ -49,20 +52,22 @@ app/Modules/
 ```
 
 **Key Technologies:**
-- Laravel 12 framework
-- Filament 4 admin panel
-- Database queue system
-- Eloquent ORM with relationships
-- Blade email templates
-- Schedule-based automation
+
+-   Laravel 12 framework
+-   Filament 4 admin panel
+-   Database queue system
+-   Eloquent ORM with relationships
+-   Blade email templates
+-   Schedule-based automation
 
 ## 🚀 Getting Started
 
 ### Prerequisites
-- PHP 8.2+
-- MySQL/MariaDB
-- Composer
-- Node.js (for frontend assets)
+
+-   PHP 8.2+
+-   MySQL/MariaDB
+-   Composer
+-   Node.js (for frontend assets)
 
 ### Installation
 
@@ -111,44 +116,49 @@ php artisan schedule:work
 ## 📋 Database Schema
 
 ### Core Tables
-- `gl_guest_letter_sends` - Email tracking for guest letters
-- `subscribers` - Newsletter subscriber management
-- `guests` - Guest information
-- `bookings` - Reservation records
-- `birthday_sends` - Birthday email tracking
-- `newsletters` - Campaign data
+
+-   `gl_guest_letter_sends` - Email tracking for guest letters
+-   `subscribers` - Newsletter subscriber management
+-   `guests` - Guest information
+-   `bookings` - Reservation records
+-   `birthday_sends` - Birthday email tracking
+-   `newsletters` - Campaign data
 
 ## 🎨 Admin Dashboard
 
 Access the admin panel at `/admin`:
-- Guest Letter management
-- Newsletter campaigns
-- Subscriber management
-- Birthday tracking
-- Email statistics and reports
+
+-   Guest Letter management
+-   Newsletter campaigns
+-   Subscriber management
+-   Birthday tracking
+-   Email statistics and reports
 
 ### Main Features
-- Drag-and-drop interface
-- Real-time status updates
-- Advanced filtering and search
-- Bulk actions
-- Email preview
-- Import/export tools
+
+-   Drag-and-drop interface
+-   Real-time status updates
+-   Advanced filtering and search
+-   Bulk actions
+-   Email preview
+-   Import/export tools
 
 ## 📧 Email System
 
 All emails are template-based and customizable:
-- **Confirmation Letters** - On booking creation
-- **Pre-Arrival Letters** - 3 days before check-in
-- **Post-Stay Letters** - After checkout with guest personalization
-- **Newsletters** - Scheduled campaigns
-- **Birthday Greetings** - Annual birthday emails
+
+-   **Confirmation Letters** - On booking creation
+-   **Pre-Arrival Letters** - 3 days before check-in
+-   **Post-Stay Letters** - After checkout with guest personalization
+-   **Newsletters** - Scheduled campaigns
+-   **Birthday Greetings** - Annual birthday emails
 
 Email templates support:
-- Guest name personalization
-- HTML and plain text
-- Dynamic data from database
-- Attachments
+
+-   Guest name personalization
+-   HTML and plain text
+-   Dynamic data from database
+-   Attachments
 
 ## 🔧 Configuration
 
@@ -176,13 +186,14 @@ DB_PASSWORD=
 
 ## 📚 Documentation
 
-- **[Copilot Instructions](.github/copilot-instructions.md)** - Detailed architecture and development guide
-- **[Database Schema](DATABASE_SCHEMA.md)** - Complete schema documentation
-- **[Deployment Checklist](DEPLOYMENT_CHECKLIST.md)** - Pre-deployment verification steps
+-   **[Copilot Instructions](.github/copilot-instructions.md)** - Detailed architecture and development guide
+-   **[Database Schema](DATABASE_SCHEMA.md)** - Complete schema documentation
+-   **[Deployment Checklist](DEPLOYMENT_CHECKLIST.md)** - Pre-deployment verification steps
 
 ## 🛠️ Development
 
 ### Project Structure
+
 ```
 app/
 ├── Modules/          # Domain modules (Guest Letter, Newsletter, Birthday)
@@ -201,11 +212,12 @@ resources/views/
 ```
 
 ### Code Conventions
-- Module-based architecture for separation of concerns
-- Eloquent relationships for data integrity
-- Queue jobs for asynchronous processing
-- Filament schemas for admin forms/tables
-- Blade templates for emails
+
+-   Module-based architecture for separation of concerns
+-   Eloquent relationships for data integrity
+-   Queue jobs for asynchronous processing
+-   Filament schemas for admin forms/tables
+-   Blade templates for emails
 
 ## 🧪 Testing
 
@@ -219,20 +231,20 @@ php artisan test tests/Feature/GuestLetterTest.php
 
 ## 📈 Recent Updates (January 15, 2026)
 
-- ✨ Guest name personalization in post-stay emails
-- ✨ Manual post-stay letter creation without bookings
-- ✨ Guest import from booking system to subscribers
-- 🎨 Optimized admin interface with dropdown menu for tools
-- 🐛 Fixed duplicate detection and guest filtering
-- 📊 Enhanced subscriber management interface
+-   ✨ Guest name personalization in post-stay emails
+-   ✨ Manual post-stay letter creation without bookings
+-   ✨ Guest import from booking system to subscribers
+-   🎨 Optimized admin interface with dropdown menu for tools
+-   🐛 Fixed duplicate detection and guest filtering
+-   📊 Enhanced subscriber management interface
 
 ## 🔒 Security
 
-- All emails processed through secure queue system
-- Database-backed email job storage
-- Error logging and notification
-- Failed email retry mechanism
-- Input validation and sanitization
+-   All emails processed through secure queue system
+-   Database-backed email job storage
+-   Error logging and notification
+-   Failed email retry mechanism
+-   Input validation and sanitization
 
 ## 📞 Support & Contact
 
